@@ -1,0 +1,196 @@
+/* HOME - HEADER */
+
+
+.hero {
+    padding: 1rem 5rem;
+    /* border: 1px solid white; */
+    height: 70vh;
+    background-image: url('../assets/img/hero_background_image.png');
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes fade-up {
+    from {
+        top: 2rem;
+        opacity: 0;
+        filter: blur(10px)
+    }
+    
+    to {
+        top: 0;
+        opacity: 1;
+        filter: blur(0)
+    }
+}
+
+.hero .hero-text-container {
+    animation-name: fade-up;
+    animation-delay: .3s;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    position: relative;
+    top: 3rem;
+    opacity: 0;
+    padding: 1.5rem;
+    width: 40%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 0.2rem;
+}
+
+.hero-text-container h1 {
+    font-size: 2rem;
+}
+
+.hero-text-container p {
+    opacity: 0.7;
+    margin-top: .5rem;
+    line-height: 1.6rem;
+}
+
+.hero-text-container .link-primary {
+    margin-top: 1rem;
+    display: block;
+    width: fit-content;
+}
+
+/* HOME - TRAVEL THE WORLD */
+
+#travel-the-world {
+    padding: 2rem 5rem;
+}
+
+.section-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-header h1 {
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h1:after {
+    background: #1A1A1A;
+    content: '';
+    position: absolute;
+    width: calc(100% + 2rem);
+    height: calc(100% + .5rem);
+    left: -1rem;
+    top: -.25rem;
+    z-index: -1;
+    box-shadow: 0 0 20px #1A1A1A
+}
+
+.section-header:before {
+    background: goldenrod;
+    content: '';
+    position: absolute;
+    width: calc(100vw - 10rem);
+    height: calc(0.1rem);
+    left: 0;
+    top: 1.25rem;
+    z-index: -1;
+}
+
+.section-header p {
+    opacity: .5;
+    width: 70%;
+    margin: 1rem auto;
+}
+
+.destination-gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.destination-gallery .destination {
+    width: 30%;
+    padding: 1rem;
+    border: 1px solid goldenrod;
+    min-height: 27.5vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.destination .city,
+.destination .country,
+.destination .description,
+.destination a {
+    margin-bottom: .25rem;
+    display: inline-block;
+    width: 100%;
+    z-index: 100;
+}
+
+.destination .city {
+    margin-top: auto;
+}
+
+.destination .country {
+    opacity: 0.7;
+}
+
+
+.destination .description {
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    opacity: .5;
+    top: 60%;
+    overflow-y: hidden;
+    max-height: 0;
+}
+
+.destination:hover .description {
+    visibility: visible;
+    display: inline-block;  
+    top: 0;
+    position: relative;
+    max-height: unset;
+    opacity: 1;
+}
+
+.destination:hover .country {
+    border-bottom: 1px solid goldenrod;
+    padding-bottom: 0.5rem;
+}
+
+.destination:hover:after {
+    position: absolute;
+    background: black;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .7;
+    z-index: 0;
+}
+
+.destination .description p {
+    opacity: 0.5;
+    margin-bottom: 0.5rem;
+}
+
+.destination a {
+    text-align: center;
+    font-size: .8rem;
+}
+
+#paris {
+    background-image: url(../assets/img/paris_background.png)
+}
+#brazil {
+    background-image: url(../assets/img/brazil_background.png)
+}
+#rome {
+    background-image: url(../assets/img/rome_background.png)
+}
