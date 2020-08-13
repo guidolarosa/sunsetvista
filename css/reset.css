@@ -20,7 +20,11 @@ body {
 .link-primary {
     background: goldenrod;
     color: brown;
-    padding: .3rem .7rem;
+    padding: .5rem 1rem;
     border-radius: 0.1rem;
     font-weight: 600;
+}
+
+.link-primary:hover {
+    box-shadow: 0 0 .5rem .2rem rgba(217, 165, 32, .5);
 }

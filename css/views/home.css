@@ -1,11 +1,10 @@
 /* HOME - HEADER */
 
-
 .hero {
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     /* border: 1px solid white; */
     height: 70vh;
-    background-image: url('../assets/img/hero_background_image.png');
+    background-image: url('../../assets/img/hero_background_image.png');
     background-size: cover;
     background-position: center;
 }
@@ -41,13 +40,15 @@
 }
 
 .hero-text-container h1 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .hero-text-container p {
     opacity: 0.7;
     margin-top: .5rem;
-    line-height: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
 }
 
 .hero-text-container .link-primary {
@@ -69,7 +70,7 @@
 }
 
 .section-header h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     position: relative;
     display: inline-block;
 }
@@ -86,6 +87,13 @@
     box-shadow: 0 0 20px #1A1A1A
 }
 
+.section-header p {
+    opacity: .5;
+    width: 30rem;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+}
+
 .section-header:before {
     background: goldenrod;
     content: '';
@@ -97,11 +105,6 @@
     z-index: -1;
 }
 
-.section-header p {
-    opacity: .5;
-    width: 70%;
-    margin: 1rem auto;
-}
 
 .destination-gallery {
     display: flex;
@@ -109,9 +112,9 @@
 }
 
 .destination-gallery .destination {
-    width: 30%;
+    width: 25vw;
     padding: 1rem;
-    border: 1px solid goldenrod;
+    /* border: 1px solid goldenrod; */
     min-height: 27.5vw;
     display: flex;
     flex-direction: column;
@@ -133,15 +136,17 @@
 
 .destination .city {
     margin-top: auto;
+    font-size: 2rem;
 }
 
 .destination .country {
+    font-size: 1.5rem;
     opacity: 0.7;
 }
 
 
 .destination .description {
-    font-size: 0.6rem;
+    font-size: 1rem;
     line-height: 1.2rem;
     opacity: .5;
     top: 60%;
@@ -171,26 +176,40 @@
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: .7;
+    opacity: .5;
+    z-index: 0;
+    backdrop-filter: blur(2px);
+}
+
+.destination:after {
+    /* transition: 0.2s ease-in-out all; */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
     z-index: 0;
 }
 
 .destination .description p {
-    opacity: 0.5;
-    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    line-height: 1.8rem;
+    font-size: 1rem;
 }
 
 .destination a {
     text-align: center;
-    font-size: .8rem;
+    font-size: 1.1rem;
 }
 
 #paris {
-    background-image: url(../assets/img/paris_background.png)
+    background-image: url(../../assets/img/paris_background.png)
 }
 #brazil {
-    background-image: url(../assets/img/brazil_background.png)
+    background-image: url(../../assets/img/brazil_background.png)
 }
 #rome {
-    background-image: url(../assets/img/rome_background.png)
+    background-image: url(../../assets/img/rome_background.png)
 }
